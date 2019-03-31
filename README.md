@@ -2,4 +2,4 @@
 news app in react using news api
 
 how it looks:
-<img></ img>
+<img />
