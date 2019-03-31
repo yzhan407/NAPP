@@ -1,0 +1,12 @@
+.selectCountry{
+    display: flex;
+    background-color:aqua;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    width:100vw;
+    height:50px;
+    margin:auto;
+    align-self: auto;
+}
+
+

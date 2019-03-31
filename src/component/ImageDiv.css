@@ -1,0 +1,42 @@
+body {
+    height: 100vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+.PopUp{
+    height:700px;
+    width:100vw;
+    background:#eee;
+    padding:20px;
+    display:flex;
+    flex-direction: row;
+    align-content: center;
+    text-align: center;
+    
+}
+.item-1{
+    width:500px;
+    background: #eee;
+    border-radius: 5px;
+    height: 300px;
+    margin:auto;
+    opacity: 1;
+    margin-left:10px;
+    color:burlywood;
+}
+.item-2{
+    width:500px;
+    background: #eee;
+    border-radius: 5px;
+    height: 300px;
+    margin:auto;
+    opacity: 1;
+    margin-left:10px;
+    color:burlywood;
+}
+img {
+    width: 100%;
+    height: 100%;
+}
