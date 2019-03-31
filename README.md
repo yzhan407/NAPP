@@ -2,4 +2,4 @@
 news app in react using news api
 
 how it looks:
-<img />
+<img src="https://github.com/dontbeafraidimnotagoodman/NAPP/blob/master/fakenewswebsite.png" alt="looks"/>
