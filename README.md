@@ -1,4 +1,4 @@
-<h6>news-api website</h6>
+<h1>news-api website</h1>
 news app in react using news api
 
 how it looks:
