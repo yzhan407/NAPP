@@ -53,10 +53,8 @@ class App extends Component {
       return imgurl;
     }
   }
-
-// removed api-key , you should apply your own api-key here : https//news.org
   handleAllClick=async(id)=>{
-    const api_call=await fetch(`https://newsapi.org/v2/top-headlines?country=${this.state.countryName}&category=${id}&apiKey=`);
+    const api_call=await fetch(`https://newsapi.org/v2/top-headlines?country=${this.state.countryName}&category=${id}&apiKey=d0dc8443dfdd45e0b01b4e15b237b688`);
     const data=await api_call.json();
     console.log(data);
     const imgurl1=this.nullImage(data.articles[0].urlToImage);
