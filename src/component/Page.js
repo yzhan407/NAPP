@@ -16,7 +16,6 @@ class Page extends React.Component{
         this.setState({
             active: Number(e.target.id),
         })
-        console.log(this.state.active)
     }
     createItems(){
         let items=[];

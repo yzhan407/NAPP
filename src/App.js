@@ -46,6 +46,7 @@ class App extends Component {
     const imgurl1=this.nullImage(this.state.data.articles[0+(num_id-1)*9].urlToImage);
     const imgurl2=this.nullImage(this.state.data.articles[1+(num_id-1)*9].urlToImage);
     const imgurl3=this.nullImage(this.state.data.articles[2+(num_id-1)*9].urlToImage);
+    console.log(imgurl2);
     const imgurl4=this.nullImage(this.state.data.articles[3+(num_id-1)*9].urlToImage);
     const imgurl5=this.nullImage(this.state.data.articles[4+(num_id-1)*9].urlToImage);
     const imgurl6=this.nullImage(this.state.data.articles[5+(num_id-1)*9].urlToImage);
@@ -108,7 +109,7 @@ class App extends Component {
     }
   }
   handleAllClick=async(id)=>{
-    const api_call=await fetch(`https://newsapi.org/v2/top-headlines?country=${this.state.countryName}&category=${id}&apiKey=d0dc8443dfdd45e0b01b4e15b237b688`);
+    const api_call=await fetch(`https://newsapi.org/v2/top-headlines?country=${this.state.countryName}&category=${id}&apiKey=d0dc8443dfdd45e0b01b4e15b237b688&pageSize=70`);
     const data=await api_call.json();
     console.log(data);
     const imgurl1=this.nullImage(data.articles[0].urlToImage);
@@ -163,7 +164,6 @@ class App extends Component {
         url8:url8,
         url9:url9,
       });
-      console.log(imgurl1);
     }
     else{
       this.setState({

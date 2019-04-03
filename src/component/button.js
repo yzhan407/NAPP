@@ -11,7 +11,7 @@ class Allbutton extends React.Component{
     }
     render(){
         return(
-            <div className="d-flex flex-column">
+            <div className="d-flex flex-column flex-button">
               <ButtonGroup className='mt-3'>
                 <Button id='business' onClick={this.handleClick.bind(this)} variant="outline-primary">商务/Business</Button>
                 <Button id='entertainment' onClick={this.handleClick.bind(this)} variant="outline-primary">娱乐/Entertainment</Button>

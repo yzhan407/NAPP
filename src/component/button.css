@@ -1,7 +1,4 @@
-.flex-button{
-    display: flexbox;
-}
+
 .flex-button>Button{
-    flex-wrap: wrap;
-    flex-grow: 1;
+   border-right: 0px;
 }
