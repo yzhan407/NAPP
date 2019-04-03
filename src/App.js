@@ -4,6 +4,7 @@ import Allbutton from './component/button';
 import Selectdiv from './component/selectdiv';
 import ImageDiv from './component/ImageDiv';
 import Logo from './logo.svg';
+import Page from './component/Page';
 
 class App extends Component {
   state={
@@ -38,7 +39,60 @@ class App extends Component {
     url7:"",
     url8:"",
     url9:"",
+    pageid:1,
   };
+  handlePage(id){
+    const num_id=Number(id);
+    const imgurl1=this.nullImage(this.state.data.articles[0+(num_id-1)*9].urlToImage);
+    const imgurl2=this.nullImage(this.state.data.articles[1+(num_id-1)*9].urlToImage);
+    const imgurl3=this.nullImage(this.state.data.articles[2+(num_id-1)*9].urlToImage);
+    const imgurl4=this.nullImage(this.state.data.articles[3+(num_id-1)*9].urlToImage);
+    const imgurl5=this.nullImage(this.state.data.articles[4+(num_id-1)*9].urlToImage);
+    const imgurl6=this.nullImage(this.state.data.articles[5+(num_id-1)*9].urlToImage);
+    const imgurl7=this.nullImage(this.state.data.articles[6+(num_id-1)*9].urlToImage);
+    const imgurl8=this.nullImage(this.state.data.articles[7+(num_id-1)*9].urlToImage);
+    const imgurl9=this.nullImage(this.state.data.articles[8+(num_id-1)*9].urlToImage);
+    const url1=this.state.data.articles[0+(num_id-1)*9].url;
+    const url2=this.state.data.articles[1+(num_id-1)*9].url;
+    const url3=this.state.data.articles[2+(num_id-1)*9].url;
+    const url4=this.state.data.articles[3+(num_id-1)*9].url;
+    const url5=this.state.data.articles[4+(num_id-1)*9].url;
+    const url6=this.state.data.articles[5+(num_id-1)*9].url;
+    const url7=this.state.data.articles[6+(num_id-1)*9].url;
+    const url8=this.state.data.articles[7+(num_id-1)*9].url;
+    const url9=this.state.data.articles[8+(num_id-1)*9].url;
+    this.setState({
+      pageid: num_id,
+      img1:imgurl1,
+      img2:imgurl2,
+      img3:imgurl3,
+      img4:imgurl4,
+      img5:imgurl5,
+      img6:imgurl6,
+      img7:imgurl7,
+      img8:imgurl8,
+      img9:imgurl9,
+      t1:this.state.data.articles[0+(num_id-1)*9].title,
+      t2:this.state.data.articles[1+(num_id-1)*9].title,
+      t3:this.state.data.articles[2+(num_id-1)*9].title,
+      t4:this.state.data.articles[3+(num_id-1)*9].title,
+      t5:this.state.data.articles[4+(num_id-1)*9].title,
+      t6:this.state.data.articles[5+(num_id-1)*9].title,
+      t7:this.state.data.articles[6+(num_id-1)*9].title,
+      t8:this.state.data.articles[7+(num_id-1)*9].title,
+      t9:this.state.data.articles[8+(num_id-1)*9].title,
+      url1:url1,
+      url2:url2,
+      url3:url3,
+      url4:url4,
+      url5:url5,
+      url6:url6,
+      url7:url7,
+      url8:url8,
+      url9:url9,
+
+    });
+  }
   handleCountryChange(countryName){
     this.setState({
       countryName: countryName,
@@ -182,9 +236,10 @@ class App extends Component {
           url7={this.state.url7}
           url8={this.state.url8}
           url9={this.state.url9}/>
-          
-
+        {this.state.data && <Page handlePage={this.handlePage.bind(this)}>
+        </Page> }
       </div>
+
     );
   }
 }
