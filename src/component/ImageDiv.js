@@ -27,10 +27,25 @@ class ImageDiv extends React.Component{
     constructor(props) {
     super(props);
     this.state = { width: 0, height: 0 ,
+        isTrueOpen:true,
+        openOrder:true
     }
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     }
-    
+
+    toggle=()=> this.setState({isTrueOpen: this.props.isOpen,
+        openOrder: !this.state.openOrder})
+    checkIsOpen(){
+        if(this.props.isOpen!==this.state.isTrueOpen){
+            setTimeout(this.toggle.bind(this),500);
+            setTimeout(this.toggle.bind(this),2000);
+
+        }
+    }
+
+    componentDidUpdate(){
+        this.checkIsOpen();
+    }
     componentDidMount() {
     this.updateWindowDimensions();
     window.addEventListener('resize', this.updateWindowDimensions);
@@ -53,10 +68,10 @@ class ImageDiv extends React.Component{
                 <div>
                     This site is made possible with news api "https://newsapi.org/"
                 </div>
-                <PopUp  className="PopUp" pose={this.props.isOpen?'open':'closed'}>
+                <PopUp  className="PopUp" pose={this.state.openOrder?'open':'closed'}>
                     <Item1 className="item-1" ><div className="innerdiv">
                         <Card style={{ width: '30vw' }}>
-                        <Card.Img variant="top" onError={this.addDefaultSrc} src={this.props.img1} alt="news" />
+                        <Card.Img variant="top" onError={this.addDefaultSrc} src={this.props.img1===undefined ?PNG:this.props.img1} alt="news" />
                         <Card.Body>
                             <Card.Text>
                                 {this.props.t1}
@@ -67,7 +82,7 @@ class ImageDiv extends React.Component{
                     </div></Item1>
                     <Item1 className="item-1" ><div className="innerdiv">
                         <Card style={{ width: '30vw' }}>
-                        <Card.Img variant="top" src={this.props.img2} alt="news" onError={this.addDefaultSrc}/>
+                        <Card.Img variant="top" src={this.props.img2===undefined ?PNG:this.props.img2} alt="news" onError={this.addDefaultSrc}/>
                         <Card.Body>
                             <Card.Text>
                             {this.props.t2}
@@ -78,7 +93,7 @@ class ImageDiv extends React.Component{
                     </div></Item1>
                     <Item1 className="item-1" ><div className="innerdiv">
                         <Card style={{ width: '30vw' }}>
-                        <Card.Img variant="top" src={this.props.img3} alt="news" onError={this.addDefaultSrc}/>
+                        <Card.Img variant="top" src={this.props.img3===undefined ?PNG:this.props.img3} alt="news" onError={this.addDefaultSrc}/>
                         <Card.Body>
                             <Card.Text>
                             {this.props.t3}
@@ -88,10 +103,10 @@ class ImageDiv extends React.Component{
                         </Card>;
                     </div></Item1>
                 </PopUp>
-                <PopUp className='PopUp' pose={this.props.isOpen?'open':'closed'}>
+                <PopUp className='PopUp' pose={this.state.openOrder?'open':'closed'}>
                     <Item2 className="item-2" ><div className="innerdiv">
                         <Card style={{ width: '30vw' }}>
-                        <Card.Img variant="top" src={this.props.img4} alt="news" onError={this.addDefaultSrc}/>
+                        <Card.Img variant="top" src={this.props.img4===undefined  ?PNG:this.props.img4} alt="news" onError={this.addDefaultSrc}/>
                         <Card.Body>
                             <Card.Text>
                             {this.props.t4}
@@ -102,7 +117,7 @@ class ImageDiv extends React.Component{
                     </div></Item2>
                     <Item2 className="item-2" ><div className="innerdiv">
                         <Card style={{ width: '30vw' }}>
-                        <Card.Img variant="top" src={this.props.img5} alt="news" onError={this.addDefaultSrc}/>
+                        <Card.Img variant="top" src={this.props.img5===undefined  ?PNG:this.props.img5} alt="news" onError={this.addDefaultSrc}/>
                         <Card.Body>
                             <Card.Text>
                             {this.props.t5}
@@ -113,7 +128,7 @@ class ImageDiv extends React.Component{
                     </div></Item2>
                     <Item2 className="item-2" ><div className="innerdiv">
                         <Card style={{ width: '30vw' }}>
-                        <Card.Img variant="top" src={this.props.img6} alt="news" onError={this.addDefaultSrc}/>
+                        <Card.Img variant="top" src={this.props.img6===undefined  ?PNG:this.props.img6} alt="news" onError={this.addDefaultSrc}/>
                         <Card.Body>
                             <Card.Text>
                             {this.props.t6}
@@ -123,10 +138,10 @@ class ImageDiv extends React.Component{
                         </Card>;
                     </div></Item2>
                 </PopUp>
-                <PopUp className='PopUp' pose={this.props.isOpen?'open':'closed'}>
+                <PopUp className='PopUp' pose={this.state.openOrder?'open':'closed'}>
                     <Item2 className="item-2" ><div className="innerdiv">
                         <Card style={{ width: '30vw' }}>
-                        <Card.Img variant="top" src={this.props.img7} alt="news" onError={this.addDefaultSrc}/>
+                        <Card.Img variant="top" src={this.props.img7===undefined ?PNG:this.props.img7} alt="news" onError={this.addDefaultSrc}/>
                         <Card.Body>
                             <Card.Text>
                             {this.props.t7}
@@ -137,7 +152,7 @@ class ImageDiv extends React.Component{
                     </div></Item2>
                     <Item2 className="item-2" ><div className="innerdiv">
                         <Card style={{ width: '30vw' }}>
-                        <Card.Img variant="top" src={this.props.img8} alt="news" onError={this.addDefaultSrc}/>
+                        <Card.Img variant="top" src={this.props.img8===undefined ? PNG:this.props.img8} alt="news" onError={this.addDefaultSrc}/>
                         <Card.Body>
                             <Card.Text>
                             {this.props.t8}
@@ -148,7 +163,7 @@ class ImageDiv extends React.Component{
                     </div></Item2>
                     <Item2 className="item-2" ><div className="innerdiv">
                         <Card style={{ width: '30vw' }}>
-                        <Card.Img variant="top" src={this.props.img9} alt="news" onError={this.addDefaultSrc}/>
+                        <Card.Img variant="top" src={this.props.img9===undefined  ?PNG:this.props.img9} alt="news" onError={this.addDefaultSrc}/>
                         <Card.Body>
                             <Card.Text>
                             {this.props.t9}
