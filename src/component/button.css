@@ -1,4 +1,15 @@
-
-.flex-button>Button{
-   border-right: 0px;
+.head-buttons{
+   border-width: 0px;
+   background-color:rgba(168, 162, 162, 0.555);
+   background-color:rgb(168, 162, 162);
+}
+.head-buttons-div{
+   display:-webkit-flex;
+   display:flex;
+   display:-ms-flexbox;
+   justify-content: center;
+   align-items: center;
+   height: 40px;
+   background-color: rgba(168, 162, 162, 0.555);
+   background-color: rgb(168, 162, 162);
 }

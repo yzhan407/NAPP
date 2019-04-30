@@ -1,7 +1,5 @@
 import React from 'react';
-
-import Button from 'react-bootstrap/Button';
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import './button.css';
 
 class Allbutton extends React.Component{
     handleClick(e){
@@ -11,17 +9,18 @@ class Allbutton extends React.Component{
     }
     render(){
         return(
-            <div className="d-flex flex-column flex-button">
-              <ButtonGroup className='mt-3'>
-                <Button id='business' onClick={this.handleClick.bind(this)} variant="outline-primary">商务/Business</Button>
-                <Button id='entertainment' onClick={this.handleClick.bind(this)} variant="outline-primary">娱乐/Entertainment</Button>
-                <Button id='health' onClick={this.handleClick.bind(this)} variant="outline-primary">健康/Health</Button>
-                <Button id='science' onClick={this.handleClick.bind(this)} variant="outline-primary">科学/Science</Button>
-                <Button id='sports' onClick={this.handleClick.bind(this)} variant="outline-primary">体育/Sports</Button>
-                <Button id='technology' onClick={this.handleClick.bind(this)} variant="outline-primary">技术/Tech</Button>
-              </ButtonGroup>
-          </div>
-
+            <div className="head-buttons-div">
+            <div></div>
+              <div>
+                <button className="head-buttons" id='business' onClick={this.handleClick.bind(this)} variant="outline-primary">Business</button>
+                <button className="head-buttons" id='entertainment' onClick={this.handleClick.bind(this)} variant="outline-primary">Entertainment</button>
+                <button className="head-buttons" id='health' onClick={this.handleClick.bind(this)} variant="outline-primary">Health</button>
+                <button className="head-buttons" id='science' onClick={this.handleClick.bind(this)} variant="outline-primary">Science</button>
+                <button className="head-buttons" id='sports' onClick={this.handleClick.bind(this)} variant="outline-primary">Sports</button>
+                <button className="head-buttons" id='technology' onClick={this.handleClick.bind(this)} variant="outline-primary">Tech</button>
+              </div>
+              <div></div>
+            </div>
         )
     }
 };

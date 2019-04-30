@@ -205,8 +205,8 @@ class App extends Component {
   render() {
     return (
       <div>
+        <Allbutton handleAllClick={this.handleAllClick.bind(this)}/>
         <h1><img src={Logo} alt="logo" className="App-logo img-control"></img>News</h1>
-          <Allbutton handleAllClick={this.handleAllClick.bind(this)}/>
           <Selectdiv handleCountryChange={this.handleCountryChange.bind(this)}/>
           <ImageDiv isOpen={this.state.isOpen} data={this.state.data}
           img1={this.state.img1}
