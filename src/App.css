@@ -42,3 +42,6 @@ h1{
   width:80px;
   height:80px;
 }
+h1{
+  background-image:linear-gradient(rgb(168, 162, 162),white)
+}

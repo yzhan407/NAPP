@@ -4,10 +4,8 @@
     background: linear-gradient(90deg, rgb(232, 234, 235) 0%, rgb(182, 182, 192) 35%, rgb(99, 103, 105) 100%);
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    width:100vw;
-    height:50px;
-    margin:auto;
-    align-self: auto;
+    width:15vw;
+    height:30px;
 }
 
 
