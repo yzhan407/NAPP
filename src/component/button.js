@@ -1,6 +1,6 @@
 import React from 'react';
 import './button.css';
-
+import Selectdiv from './selectdiv'
 class Allbutton extends React.Component{
     handleClick(e){
         e.preventDefault();
@@ -19,7 +19,7 @@ class Allbutton extends React.Component{
                 <button className="head-buttons" id='sports' onClick={this.handleClick.bind(this)} variant="outline-primary">Sports</button>
                 <button className="head-buttons" id='technology' onClick={this.handleClick.bind(this)} variant="outline-primary">Tech</button>
               </div>
-              <div></div>
+              <div><Selectdiv handleCountryChange={this.props.handleCountryChange.bind(this)}/></div>
             </div>
         )
     }

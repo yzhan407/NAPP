@@ -205,9 +205,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Allbutton handleAllClick={this.handleAllClick.bind(this)}/>
+        <Allbutton handleAllClick={this.handleAllClick.bind(this)} handleCountryChange={this.handleCountryChange.bind(this)}/>
         <h1><img src={Logo} alt="logo" className="App-logo img-control"></img>News</h1>
-          <Selectdiv handleCountryChange={this.handleCountryChange.bind(this)}/>
           <ImageDiv isOpen={this.state.isOpen} data={this.state.data}
           img1={this.state.img1}
           img2={this.state.img2}
@@ -238,6 +237,9 @@ class App extends Component {
           url9={this.state.url9}/>
         {this.state.data && <Page handlePage={this.handlePage.bind(this)}>
         </Page> }
+        <footer>
+          This site is made possible by news api at newsapi.org
+        </footer>
       </div>
 
     );

@@ -66,7 +66,7 @@ class ImageDiv extends React.Component{
         return(
             <div>
                 <div>
-                    This site is made possible with news api "https://newsapi.org/"
+                    
                 </div>
                 <PopUp  className="PopUp" pose={this.state.openOrder?'open':'closed'}>
                     <Item1 className="item-1" ><div className="innerdiv">
