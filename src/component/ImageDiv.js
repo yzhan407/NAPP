@@ -70,7 +70,7 @@ class ImageDiv extends React.Component{
                 </div>
                 <PopUp  className="PopUp" pose={this.state.openOrder?'open':'closed'}>
                     <Item1 className="item-1" ><div className="innerdiv">
-                        <Card style={{ width: '30vw' }}>
+                        <Card style={{ width: '30vw',height: '350px' }}>
                         <Card.Img variant="top" onError={this.addDefaultSrc} src={this.props.img1===undefined ?PNG:this.props.img1} alt="news" />
                         <Card.Body>
                             <Card.Text>
@@ -81,7 +81,7 @@ class ImageDiv extends React.Component{
                         </Card>;
                     </div></Item1>
                     <Item1 className="item-1" ><div className="innerdiv">
-                        <Card style={{ width: '30vw' }}>
+                        <Card style={{ width: '30vw' ,height: '350px' }}>
                         <Card.Img variant="top" src={this.props.img2===undefined ?PNG:this.props.img2} alt="news" onError={this.addDefaultSrc}/>
                         <Card.Body>
                             <Card.Text>
@@ -92,7 +92,7 @@ class ImageDiv extends React.Component{
                         </Card>;
                     </div></Item1>
                     <Item1 className="item-1" ><div className="innerdiv">
-                        <Card style={{ width: '30vw' }}>
+                        <Card style={{ width: '30vw',height: '350px'  }}>
                         <Card.Img variant="top" src={this.props.img3===undefined ?PNG:this.props.img3} alt="news" onError={this.addDefaultSrc}/>
                         <Card.Body>
                             <Card.Text>
@@ -105,7 +105,7 @@ class ImageDiv extends React.Component{
                 </PopUp>
                 <PopUp className='PopUp' pose={this.state.openOrder?'open':'closed'}>
                     <Item2 className="item-2" ><div className="innerdiv">
-                        <Card style={{ width: '30vw' }}>
+                        <Card style={{ width: '30vw',height: '350px'  }}>
                         <Card.Img variant="top" src={this.props.img4===undefined  ?PNG:this.props.img4} alt="news" onError={this.addDefaultSrc}/>
                         <Card.Body>
                             <Card.Text>
@@ -116,7 +116,7 @@ class ImageDiv extends React.Component{
                         </Card>;
                     </div></Item2>
                     <Item2 className="item-2" ><div className="innerdiv">
-                        <Card style={{ width: '30vw' }}>
+                        <Card style={{ width: '30vw',height: '350px'  }}>
                         <Card.Img variant="top" src={this.props.img5===undefined  ?PNG:this.props.img5} alt="news" onError={this.addDefaultSrc}/>
                         <Card.Body>
                             <Card.Text>
@@ -127,7 +127,7 @@ class ImageDiv extends React.Component{
                         </Card>;
                     </div></Item2>
                     <Item2 className="item-2" ><div className="innerdiv">
-                        <Card style={{ width: '30vw' }}>
+                        <Card style={{ width: '30vw',height: '350px'  }}>
                         <Card.Img variant="top" src={this.props.img6===undefined  ?PNG:this.props.img6} alt="news" onError={this.addDefaultSrc}/>
                         <Card.Body>
                             <Card.Text>
@@ -140,7 +140,7 @@ class ImageDiv extends React.Component{
                 </PopUp>
                 <PopUp className='PopUp' pose={this.state.openOrder?'open':'closed'}>
                     <Item2 className="item-2" ><div className="innerdiv">
-                        <Card style={{ width: '30vw' }}>
+                        <Card style={{ width: '30vw',height: '350px'  }}>
                         <Card.Img variant="top" src={this.props.img7===undefined ?PNG:this.props.img7} alt="news" onError={this.addDefaultSrc}/>
                         <Card.Body>
                             <Card.Text>
@@ -151,7 +151,7 @@ class ImageDiv extends React.Component{
                         </Card>;
                     </div></Item2>
                     <Item2 className="item-2" ><div className="innerdiv">
-                        <Card style={{ width: '30vw' }}>
+                        <Card style={{ width: '30vw',height: '350px'  }}>
                         <Card.Img variant="top" src={this.props.img8===undefined ? PNG:this.props.img8} alt="news" onError={this.addDefaultSrc}/>
                         <Card.Body>
                             <Card.Text>
@@ -162,7 +162,7 @@ class ImageDiv extends React.Component{
                         </Card>;
                     </div></Item2>
                     <Item2 className="item-2" ><div className="innerdiv">
-                        <Card style={{ width: '30vw' }}>
+                        <Card style={{ width: '30vw',height: '350px'  }}>
                         <Card.Img variant="top" src={this.props.img9===undefined  ?PNG:this.props.img9} alt="news" onError={this.addDefaultSrc}/>
                         <Card.Body>
                             <Card.Text>

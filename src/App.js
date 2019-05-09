@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import Allbutton from './component/button';
-import Selectdiv from './component/selectdiv';
 import ImageDiv from './component/ImageDiv';
 import Logo from './logo.svg';
 import Page from './component/Page';
@@ -10,7 +9,7 @@ class App extends Component {
   state={
     buttonid:undefined,
     data: undefined,
-    countryName:'cn',
+    countryName:'us',
     isOpen:true,
     img1:undefined,
     img2:undefined,
@@ -201,6 +200,103 @@ class App extends Component {
       console.log(imgurl1);
     }
     
+  };
+  componentDidMount(){
+    fetch(`https://newsapi.org/v2/top-headlines?country=US&category=business&apiKey=d0dc8443dfdd45e0b01b4e15b237b688&pageSize=70`)
+      .then(response => response.json())
+      .then((data) => {
+        console.log(data)
+        const imgurl1=this.nullImage(data.articles[0].urlToImage);
+        const imgurl2=this.nullImage(data.articles[1].urlToImage);
+        const imgurl3=this.nullImage(data.articles[2].urlToImage);
+        const imgurl4=this.nullImage(data.articles[3].urlToImage);
+        const imgurl5=this.nullImage(data.articles[4].urlToImage);
+        const imgurl6=this.nullImage(data.articles[5].urlToImage);
+        const imgurl7=this.nullImage(data.articles[6].urlToImage);
+        const imgurl8=this.nullImage(data.articles[7].urlToImage);
+        const imgurl9=this.nullImage(data.articles[8].urlToImage);
+        const url1=data.articles[0].url;
+        const url2=data.articles[1].url;
+        const url3=data.articles[2].url;
+        const url4=data.articles[3].url;
+        const url5=data.articles[4].url;
+        const url6=data.articles[5].url;
+        const url7=data.articles[6].url;
+        const url8=data.articles[7].url;
+        const url9=data.articles[8].url;
+
+        if (this.state.isOpen===false){
+          this.setState({
+            buttonid:"business",
+            data:data,
+            isOpen:true,
+            img1:imgurl1,
+            img2:imgurl2,
+            img3:imgurl3,
+            img4:imgurl4,
+            img5:imgurl5,
+            img6:imgurl6,
+            img7:imgurl7,
+            img8:imgurl8,
+            img9:imgurl9,
+            t1:data.articles[0].title,
+            t2:data.articles[1].title,
+            t3:data.articles[2].title,
+            t4:data.articles[3].title,
+            t5:data.articles[4].title,
+            t6:data.articles[5].title,
+            t7:data.articles[6].title,
+            t8:data.articles[7].title,
+            t9:data.articles[8].title,
+            url1:url1,
+            url2:url2,
+            url3:url3,
+            url4:url4,
+            url5:url5,
+            url6:url6,
+            url7:url7,
+            url8:url8,
+            url9:url9,
+          });
+        }
+        else{
+          this.setState({
+            buttonid:"business",
+            data:data,
+            isOpen:false,
+            img1:imgurl1,
+            img2:imgurl2,
+            img3:imgurl3,
+            img4:imgurl4,
+            img5:imgurl5,
+            img6:imgurl6,
+            img7:imgurl7,
+            img8:imgurl8,
+            img9:imgurl9,
+            t1:data.articles[0].title,
+            t2:data.articles[1].title,
+            t3:data.articles[2].title,
+            t4:data.articles[3].title,
+            t5:data.articles[4].title,
+            t6:data.articles[5].title,
+            t7:data.articles[6].title,
+            t8:data.articles[7].title,
+            t9:data.articles[8].title,
+            url1:url1,
+            url2:url2,
+            url3:url3,
+            url4:url4,
+            url5:url5,
+            url6:url6,
+            url7:url7,
+            url8:url8,
+            url9:url9,
+          });
+        }
+          })
+        .catch(err => {
+          console.log(err)
+        })
   };
   render() {
     return (

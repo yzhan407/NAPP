@@ -1,6 +1,7 @@
 import React from 'react';
 import './button.css';
 import Selectdiv from './selectdiv'
+import moment from 'moment';
 class Allbutton extends React.Component{
     handleClick(e){
         e.preventDefault();
@@ -10,7 +11,7 @@ class Allbutton extends React.Component{
     render(){
         return(
             <div className="head-buttons-div">
-            <div></div>
+            <div className='time-zone'> Today is: {moment().format('MMMM Do YYYY')}</div>
               <div>
                 <button className="head-buttons" id='business' onClick={this.handleClick.bind(this)} variant="outline-primary">Business</button>
                 <button className="head-buttons" id='entertainment' onClick={this.handleClick.bind(this)} variant="outline-primary">Entertainment</button>
